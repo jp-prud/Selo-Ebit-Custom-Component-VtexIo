@@ -14,12 +14,12 @@ const SeloEbit: FC = () => {
   const { value, items, clientProfileData, paymentData, deliveryParcels } =
     orderGroup?.orders[0];
 
-  const { address } = deliveryParcels[0];
+  const { address, seller } = deliveryParcels[0];
 
   const { transactionId, payments } = paymentData.transactions[0];
   const { firstName } = clientProfileData;
-  const { postalCode: zipCode } = address;
-  const { installments: parcel } = payments[0];
+  const { postalCode: zipCode, price: deliveryTax } = address;
+  const { installments: parcels } = payments[0];
 
   const resumeItems = items.map(
     ({ name, skuName, price, quantity }: ProductProps) => ({
@@ -30,18 +30,33 @@ const SeloEbit: FC = () => {
     })
   );
 
+  // const deliveryTime = Number(shippingEstimate.replace(/\D/g, ''))
+
   console.log({
     firstName,
     transactionId,
-    parcel,
+    parcels,
     zipCode,
+    deliveryTax,
+    seller,
     value,
     resumeItems,
   });
 
   console.log(order);
 
-  return <div className={styles.bannerEbitContainer} />;
+  return (
+    <div className={styles.bannerEbitContainer}>
+      <param
+        id="ebitParam"
+        value={`storeId=76732&transactionId=${transactionId}&platform=1&zipCode=${zipCode}&parcels=${parcels}&deliveryTax=${deliveryTax}&deliveryTime=${1} &totalSpent=${value.toFixed(
+          2
+        )}&value=${value}&quantity=1 &productName=productName&paymentType=paymentType&sku=sku &productCondition=0&deliveryType=deliveryType&mktSaleId= mktSaleId='LojaBuettner'&l5=''&man=''&brd=''&brds=''`}
+      />
+
+      <a id="bannerEbit"></a>
+    </div>
+  );
 };
 
 export default SeloEbit;
