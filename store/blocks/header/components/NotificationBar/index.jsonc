@@ -1,0 +1,35 @@
+{
+  "flex-layout.row#notificationBar": {
+    "children": [
+      "flex-layout.row#notificationBarContent"
+    ],
+    "props": {
+      "blockClass": "notification-bar"
+    }
+  },
+
+  "flex-layout.row#notificationBarContent": {
+    "title": "Barra de Notificação",
+    "children": ["notification.bar", "rich-text#ctaNotificationBar"],
+    "props": {
+      "blockClass": "notification-bar__content"
+    }
+  },
+
+  "notification.bar": {
+    "title": "Conteúdo",
+    "props": {
+      "blockClass": "notification-bar__content--item--phrase",
+      "content": ""
+    }
+  },
+
+  "rich-text#ctaNotificationBar": {
+    "title": "Botão",
+    "props": {
+      "blockClass": "notification-bar__content--item--link",
+      "text": "[NÃO TENHO CNPJ](/)",
+      "textAlignment": "RIGHT"
+    }
+  }
+}

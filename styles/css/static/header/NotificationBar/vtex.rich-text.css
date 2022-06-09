@@ -1,0 +1,16 @@
+.wrapper--notification-bar__content--item--link {
+  width: fit-content;
+  margin-left: auto;
+}
+
+.link--notification-bar__content--item--link {
+  text-decoration: none;
+  color: #FFF;
+  font: bold 14px 'Open Sans'
+}
+
+@media (max-width: 639px) {
+  .container--notification-bar__content--item--link {
+    display: none;
+  }
+}

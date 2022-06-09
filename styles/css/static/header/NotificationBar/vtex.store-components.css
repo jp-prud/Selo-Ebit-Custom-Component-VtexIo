@@ -1,0 +1,14 @@
+.notificationBarContainer--notification-bar__content--item--phrase {
+  background: none;
+}
+
+.notificationBarInner--notification-bar__content--item--phrase {
+  height: 100%;
+  justify-content: start;
+}
+
+@media (max-width: 768px) {
+  .notificationBarInner--notification-bar__content--item--phrase {
+    justify-content: center;
+  }
+}

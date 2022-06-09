@@ -1,0 +1,24 @@
+{
+  "header-row#mainRowHeader": {
+    "title": "Container Principal",
+    "children": [
+      "drawer",
+      "image#brandImage",
+      "minicart.v2",
+      "search-bar"
+    ],
+    "props": {
+      "blockClass": "header__main-container"
+    }
+  },
+
+  "image#brandImage": {
+    "title": "Logo",
+    "props": {
+      "src": "assets/images/Logo.svg",
+      "link": "/",
+      "title": "Logo - Buettner",
+      "alt": "Logo -Buettner"
+    }
+  }
+}

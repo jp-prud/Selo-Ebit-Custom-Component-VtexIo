@@ -1,0 +1,16 @@
+.flexRow--notification-bar {
+  background-color: #FF3E3E;
+  font: normal 14px 'Open Sans'
+}
+
+.flexRow--notification-bar__content {
+  width: 90%;
+  max-width: 1464px;
+  margin: 0 auto;
+}
+
+@media (max-width:  580px) {
+  .flexRow--notification-bar {
+    font-size: 12px;
+  }
+}

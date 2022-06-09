@@ -1,0 +1,5 @@
+
+.headerRowContainer--header__main-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

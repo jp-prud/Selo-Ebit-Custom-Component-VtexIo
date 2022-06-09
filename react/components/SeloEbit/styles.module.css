@@ -1,0 +1,7 @@
+.bannerEbitContainer {
+  max-width: 800px;
+  min-height: 100px;
+  margin: 32px auto;
+  border-radius: 16px;
+  background-color: #cacaca;
+}
